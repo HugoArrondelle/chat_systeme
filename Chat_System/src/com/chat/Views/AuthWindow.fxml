@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#onWindowDragged" onMousePressed="#onWindowPressed" prefHeight="531.0" prefWidth="560.0" stylesheets="@sample.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Systeme_Chat.Controllers.AuthController">
+   <children>
+      <Ellipse fill="#e17e7e" layoutX="110.0" layoutY="346.0" radiusX="100.0" radiusY="35.0" rotate="29.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" StackPane.alignment="BOTTOM_RIGHT">
+         <StackPane.margin>
+            <Insets bottom="104.0" right="30.0" />
+         </StackPane.margin>
+      </Ellipse>
+      <Ellipse fill="#e17e7e" radiusX="223.0" radiusY="196.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" StackPane.alignment="BOTTOM_RIGHT">
+         <StackPane.margin>
+            <Insets bottom="82.0" right="30.0" />
+         </StackPane.margin>
+      </Ellipse>
+      <Ellipse fill="#23262b" radiusX="223.0" radiusY="196.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" StackPane.alignment="TOP_LEFT" />
+      <Rectangle arcHeight="5.0" arcWidth="500.0" fill="#23262b" height="36.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="211.0" StackPane.alignment="CENTER_LEFT">
+         <StackPane.margin>
+            <Insets left="20.0" top="190.0" />
+         </StackPane.margin>
+      </Rectangle>
+      <Ellipse fill="#23262b" radiusX="100.0" radiusY="35.0" rotate="-28.4" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" StackPane.alignment="CENTER_LEFT">
+         <StackPane.margin>
+            <Insets top="112.0" />
+         </StackPane.margin>
+      </Ellipse>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox>
+               <children>
+                  <Region prefWidth="277.0" HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#onCloseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/close2.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets right="100.0" />
+               </padding>
+            </HBox>
+            <Label fx:id="labelSysteme" alignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="90.0" top="50.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="labelConnexion" alignment="CENTER" prefHeight="30.0" prefWidth="182.0" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="90.0" />
+               </VBox.margin>
+            </Label>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="90.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets right="100.0" />
+               </padding>
+            </Separator>
+            <HBox>
+               <children>
+                  <Label text="&gt;" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pseudo" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="90.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="authError" textFill="#c66161">
+               <VBox.margin>
+                  <Insets left="90.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Region prefHeight="77.0" prefWidth="385.0" />
+            <HBox alignment="CENTER" prefHeight="42.0" prefWidth="385.0">
+               <children>
+                  <Label onMouseClicked="#onEnterClicked" text="Entrer " textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <StackPane.margin>
+            <Insets bottom="140.0" right="115.0" />
+         </StackPane.margin>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </VBox>
+      <Rectangle arcHeight="5.0" arcWidth="500.0" fill="#e17e7e" height="36.0" layoutX="30.0" layoutY="367.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="211.0" StackPane.alignment="BOTTOM_RIGHT">
+         <StackPane.margin>
+            <Insets bottom="80.0" right="57.0" />
+         </StackPane.margin>
+      </Rectangle>
+   </children>
+</StackPane>

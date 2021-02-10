@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#onWindowDragged" onMousePressed="#onWindowPressed" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #23262b; -fx-background-radius: 15px;" stylesheets="@sample.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chat.Controllers.AuthController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="500.0">
+         <children>
+            <HBox spacing="12.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" onMouseClicked="#onCloseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Close.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#onMinimizeClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Reduce.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="-25.0" top="-25.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="342.0">
+               <children>
+                  <Label fx:id="labelConnexion" alignment="CENTER" prefHeight="37.0" prefWidth="182.0" textFill="WHITE">
+                     <font>
+                        <Font name="Avenir Next Condensed Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="342.0">
+               <children>
+                  <Label fx:id="labelSysteme" alignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Avenir Next Condensed Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="90.0" top="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets right="90.0" />
+               </padding>
+            </Separator>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="342.0">
+               <children>
+                  <TextField fx:id="pseudo" prefHeight="37.0" prefWidth="252.0" promptText="Pseudo" style="-fx-background-radius: 300px; -fx-background-color: #FFFFFF;" styleClass="font-size-m">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="authError" textFill="#c66161">
+               <VBox.margin>
+                  <Insets left="90.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Region prefHeight="17.0" prefWidth="440.0" />
+            <HBox alignment="CENTER" prefHeight="42.0" prefWidth="385.0">
+               <children>
+                  <Label alignment="CENTER" onMouseClicked="#onEnterClicked" text="Entrer " textFill="WHITE">
+                     <font>
+                        <Font name="Academy Engraved LET Plain:1.0" size="25.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+
+<StackPane alignment="TOP_LEFT" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#onWindowDragged" onMousePressed="#onWindowPressed" prefHeight="400.0" prefWidth="540.0" stylesheets="@AuthWindow.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chat.controllers.AuthController">
+   <children>
+      <Rectangle arcHeight="80.0" arcWidth="80.0" height="250.0" layoutX="10.0" layoutY="10.0" styleClass="bg-bulle-bg" width="400.0" StackPane.alignment="BOTTOM_RIGHT">
+         <StackPane.margin>
+            <Insets bottom="60.0" />
+         </StackPane.margin>
+      </Rectangle>
+      <Polygon layoutX="60.0" layoutY="360.0" points="-79.19990539550781, -27.1995906829834, 0.0, 40.0, 3.204345557605848E-5, -27.199556350708008" styleClass="bg-bulle-arrow" StackPane.alignment="BOTTOM_RIGHT">
+         <StackPane.margin>
+            <Insets right="50.0" />
+         </StackPane.margin>
+      </Polygon>
+      <Rectangle arcHeight="80.0" arcWidth="80.0" height="300.0" styleClass="bg-bulle-fg" width="500.0" />
+      <Polygon points="96.80001068115234, -50.39996337890625, 0.0, 40.0, 2.441406286379788E-5, -50.400001525878906" styleClass="bg-bulle-fg" StackPane.alignment="BOTTOM_LEFT">
+         <StackPane.margin>
+            <Insets bottom="10.0" left="50.0" />
+         </StackPane.margin>
+      </Polygon>
+      <VBox StackPane.alignment="TOP_LEFT">
+         <children>
+            <HBox>
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#onCloseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/close.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Label fx:id="logIntoLabel" />
+            <Label fx:id="systemLabel" layoutX="40.0" layoutY="60.0" styleClass="font-weight-bold" />
+            <Separator>
+               <padding>
+                  <Insets right="290.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Separator>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text="&gt;" />
+                  <TextField fx:id="username" onAction="#onEnterClicked" styleClass="font-size-s" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets left="5.0" right="50.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label fx:id="authError" layoutX="40.0" layoutY="60.0" style="-fx-text-fill: red;">
+               <styleClass>
+                  <String fx:value="font-size-xs" />
+                  <String fx:value="font-weight-bold" />
+               </styleClass>
+            </Label>
+            <Region VBox.vgrow="ALWAYS" />
+            <HBox>
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Label fx:id="enterLabel" accessibleRole="BUTTON" onMouseClicked="#onEnterClicked" styleClass="font-size-s, font-weight-bold">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+         <StackPane.margin>
+            <Insets bottom="100.0" right="40.0" />
+         </StackPane.margin>
+      </VBox>
+   </children>
+</StackPane>

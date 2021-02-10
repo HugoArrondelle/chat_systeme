@@ -1,0 +1,19 @@
+* {
+    /* Colors */
+   -fx-black: #FCFBFC;
+   -fx-dark-gray: #F2F3F7;
+   -fx-light-gray: #E3E7EB;
+   -fx-white: #343B46;
+}
+
+.image-view {
+    -fx-effect: innershadow(gaussian,-fx-white,10,1,0,0);
+}
+
+.color-inverse {
+    -fx-effect: innershadow(gaussian,-fx-dark-gray,10,1,0,0);
+}
+
+.color-image {
+    -fx-effect: null;
+}

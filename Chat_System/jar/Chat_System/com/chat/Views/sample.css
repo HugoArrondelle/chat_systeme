@@ -1,0 +1,38 @@
+
+
+
+
+
+
+/* Global variables */
+* {
+    /* Colors */
+   -fx-black: #191a1f;
+   -fx-dark-gray: #23262b;
+   -fx-light-gray: #2E3339;
+   -fx-white: #ffffff;
+}
+
+/* Default style */
+.root {
+    -fx-background-color: transparent;
+}
+
+.text-input {
+    -fx-text-fill: -fx-black;
+    -fx-background-color: transparent;
+}
+
+/*
+@font-face {
+    src: url('calibri.ttf');
+}
+
+@font-face {
+    src: url('calibrib.ttf');
+}
+
+*/
+
+
+

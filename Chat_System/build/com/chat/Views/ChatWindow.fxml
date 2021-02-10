@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#onWindowDragged" onMousePressed="#onWindowPressed" prefHeight="700.0" prefWidth="850.0" style="-fx-background-radius: 15px;" stylesheets="@ChatWindow.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chat.Controllers.ChatController">
+   <children>
+      <VBox prefWidth="350.0" style="-fx-background-color: #E3E3E3#E3E3E3; -fx-background-radius: 15px 0px 0px 15px;">
+         <children>
+            <HBox spacing="12.0">
+
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" onMouseClicked="#onCloseClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Close.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#onMinimizeClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Reduce.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="20.0" />
+               </padding>
+            </HBox>
+            <Label fx:id="titleListControl" alignment="CENTER" prefWidth="350.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="20.0" />
+               </font>
+            </Label>
+            <ScrollPane fx:id="listControl" fitToHeight="true" fitToWidth="true" prefWidth="350.0" style="-fx-background-color: #E3E3E3;" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="settingsTab">
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Label fx:id="deleteDataLabel" styleClass="font-size-m" text="Historique" />
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Button fx:id="deleteDataBtn" mnemonicParsing="false" onAction="#onDeleteDataClicked" text="Supprimer ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content></ScrollPane>
+            <VBox prefWidth="100.0" style="-fx-background-radius: 0px 0px 0px 15px;">
+               <children>
+                  <HBox fx:id="editUsernameBox" alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #E3E3E3;">
+                     <children>
+                        <Region />
+                        <TextField fx:id="editUsernameField" prefWidth="100.0" style="-fx-background-radius: 5px;" />
+                        <Label onMouseClicked="#checkUsername" text="Ok">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Avenir Next Condensed Bold" size="13.0" />
+                           </font></Label>
+                        <Region />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="usernameBox" alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #E3E3E3;">
+                     <children>
+                        <Region />
+                        <Label fx:id="connectedAsLabel" />
+                        <Label fx:id="usernameLabel" layoutX="210.0" layoutY="10.0">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#editUsername" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/edit-3.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Region />
+                     </children></HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefWidth="350.0" style="-fx-background-color: #D0D0D0#D0D0D0 #D0D0D0; -fx-background-radius: 0px 0px 0px 15px;">
+               <children>
+                  <StackPane fx:id="tabUser" onMouseClicked="#onUserTabClicked">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/user-searching.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </StackPane>
+                  <StackPane fx:id="tabChat" onMouseClicked="#onChatTabClicked">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/conversation-2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </StackPane>
+                  <StackPane fx:id="tabSettings" onMouseClicked="#onSettingsTabClicked">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/adjust-2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </StackPane>
+                  <StackPane onMouseClicked="#onSignoutTabClicked">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/off-button.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </StackPane>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <StackPane prefWidth="500.0">
+         <children>
+            <VBox style="-fx-background-radius: 40px;" styleClass="bg-dark-gray">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false">
+                     <children>
+                        <Label fx:id="chatName" styleClass="font-weight-bold, font-size-l" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <StackPane onMouseClicked="#onChatClosed" style="-fx-background-radius: 5px;" styleClass="bg-light-gray">
+                           <children>
+                              <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/close3.png" />
+                                 </image>
+                                 <StackPane.margin>
+                                    <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                 </StackPane.margin>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </StackPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </HBox>
+                  <Separator prefWidth="200.0" styleClass="separator-light-gray">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <ScrollPane fx:id="messageListPane" fitToHeight="true" fitToWidth="true" style="-fx-border-color: #F4F4F4;" styleClass="scroll-bar-dark" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="messageList" alignment="BOTTOM_LEFT" spacing="10.0">
+                           <rotationAxis>
+                              <Point3D />
+                           </rotationAxis>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </ScrollPane>
+                  <HBox alignment="CENTER" style="-fx-background-radius: 10px;" styleClass="bg-light-gray">
+                     <children>
+                        <TextField fx:id="messageField" onAction="#sendMessage" promptText="Type something" style="-fx-background-radius: 300px;" styleClass="font-size-m" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </TextField>
+                        <StackPane onMouseClicked="#selectFile">
+                           <children>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/add-file.png" />
+                                 </image>
+                                 <StackPane.margin>
+                                    <Insets bottom="13.5" left="13.5" right="13.5" top="13.5" />
+                                 </StackPane.margin>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </StackPane>
+                        <StackPane layoutX="316.0" layoutY="10.0" onMouseClicked="#sendMessage" style="-fx-background-radius: 5px; -fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="color-inverse">
+                                 <image>
+                                    <Image url="@../../../images/send.png" />
+                                 </image>
+                                 <StackPane.margin>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </StackPane.margin>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="5.0" right="5.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="noChatStarted" alignment="CENTER" layoutX="10.0" layoutY="10.0" style="-fx-background-radius: 0px; -fx-background-color: white;" styleClass="bg-dark-gray">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" styleClass="color-image">
+                     <image>
+                        <Image url="@../../../images/Chat.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="noConvLabel">
+                     <styleClass>
+                        <String fx:value="font-weight-bold" />
+                        <String fx:value="font-size-l" />
+                     </styleClass>
+                     <font>
+                        <Font name="Avenir Next Condensed Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</HBox>

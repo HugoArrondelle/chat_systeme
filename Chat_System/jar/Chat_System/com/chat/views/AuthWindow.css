@@ -1,0 +1,73 @@
+/* Font */
+@font-face {
+    src: url('../../../fonts/calibri.ttf');
+}
+
+@font-face {
+    src: url('../../../fonts/calibrib.ttf');
+}
+
+/* Global variables */
+* {
+    /* Colors */
+   -fx-black: #191a1f;
+   -fx-dark-gray: #23262b;
+   -fx-light-gray: #2E3339;
+   -fx-white: #ffffff;
+}
+
+/* Default style */
+.root {
+    -fx-background-color: transparent;
+    -fx-font-size: 35px;
+    -fx-font-family: "Calibri";
+}
+
+.label {
+    -fx-text-fill: -fx-white;
+}
+
+.text-input {
+    -fx-text-fill: -fx-white;
+    -fx-background-color: transparent;
+}
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: -fx-white;
+}
+
+/* Background styles */
+.bg-dark-gray {
+    -fx-background-color: -fx-dark-gray;
+}
+
+/* Font styles */
+.font-weight-bold {
+    -fx-font-weight: bold;
+}
+
+.font-size-s {
+    -fx-font-size: 30px;
+}
+
+.font-size-xs {
+    -fx-font-size: 15px;
+}
+
+/* Background styles */
+.bg-bulle-fg {
+    -fx-fill: -fx-dark-gray;
+    -fx-stroke-width: 0px;
+}
+
+.bg-bulle-bg {
+    -fx-fill: linear-gradient(to top, #fb7e60, #fc477a);
+    -fx-stroke-width: 0px;
+}
+
+.bg-bulle-arrow {
+    -fx-fill: linear-gradient(to top, #fb8b5a, #fb7e60);
+    -fx-stroke-width: 0px;
+}

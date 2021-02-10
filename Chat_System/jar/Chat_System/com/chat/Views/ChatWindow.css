@@ -1,0 +1,166 @@
+
+
+/* Global variables */
+/*
+* {
+
+   -fx-black: #191a1f;
+   -fx-dark-gray: #23262b;
+   -fx-light-gray: #2e3339;
+   -fx-green: #5cd258;
+   -fx-white: #ffffff;
+}
+*/
+/* Default style */
+/*
+.root {
+    -fx-background-color: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-family: "Calibri";
+}
+*/
+/*
+.label {
+    -fx-text-fill: #ffffff;
+}
+
+.text-input {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: transparent;
+}
+*/
+/*
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+.scroll-pane {
+   -fx-background-color: transparent;
+   -fx-hbar-policy: never;
+}
+
+
+
+
+
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: -fx-dark-gray;
+}
+*/
+/* Background styles */
+/*
+.bg-black {
+    -fx-background-color: -fx-black;
+}
+
+.bg-dark-gray {
+    -fx-background-color: -fx-dark-gray;
+}
+
+.bg-light-gray {
+    -fx-background-color: -fx-light-gray;
+}
+*/
+/* Font styles */
+/*
+.font-weight-bold {
+    -fx-font-weight: bold;
+}
+
+.font-size-xl {
+    -fx-font-size: 28px;
+}
+
+.font-size-l {
+    -fx-font-size: 22px;
+}
+
+.font-size-m {
+    -fx-font-size: 16px;
+}
+*/
+/* Separator classes */
+/*
+.separator-message-input {
+    -fx-border-style: solid;
+    -fx-border-width: 0 2 0 0;
+    -fx-border-color: -fx-dark-gray;
+}
+
+.separator-light-gray {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: -fx-light-gray;
+}
+
+*/
+
+
+
+
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10px;
+}
+
+
+.scroll-bar .increment-button, .scroll-bar .decrement-button, .scroll-bar .increment-arrow, .scroll-bar .decrement-arrow, .scroll-bar .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #F4F4F4;
+    -fx-background-radius: 20px;
+}
+
+.scroll-bar-dark > .scroll-bar {
+    -fx-background-color:transparent;
+    -fx-pref-width: 15px;
+    -fx-padding: 0 0 0 5px;
+}
+
+.scroll-bar-dark > .scroll-bar .thumb {
+    -fx-background-color: #F4F4F4;
+    -fx-background-radius: 20px;
+}
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+.scroll-pane {
+   -fx-background-color: transparent;
+}
+
+
+
+.message-receiver {
+    -fx-background-color: #E6E6E6;
+    -fx-background-radius: 0 10px 10px 10px;
+    -fx-wrap-text: true;
+    -fx-text-alignment: justify;
+}
+
+.message-emetter {
+    -fx-background-color: #3480F6;
+    -fx-background-radius: 10px 10px 0 10px;
+    -fx-wrap-text: true;
+    -fx-text-alignment: justify;
+}
+
+
+.test{
+    -fx-padding: 5 7 5 7;
+    -fx-background-color:red;
+    -fx-background-radius: 10px;
+}
+
+/*
+.label {
+    -fx-font-family: 'Avenir Next Condensed';
+}
+*/
